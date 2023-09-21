@@ -31,7 +31,7 @@ pipeline{
       steps{
         rtMavenDeployer(
           id:'deployer',
-          serverid:'Pipeline_repository@artifactory',
+          serverId:'Pipeline_repository@artifactory',
           releaseRepo:'Pipeline_repository',
           snapshotRepo:'Pipeline_repository'
         )
@@ -41,7 +41,7 @@ pipeline{
           deployerId:'deployer'
         )
         rtPublishBuildInfo(
-          serverid:'Pipeline_repository@artifactory'
+          serverId:'Pipeline_repository@artifactory'
         )
       }
     }
